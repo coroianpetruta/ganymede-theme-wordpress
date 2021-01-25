@@ -1,0 +1,55 @@
+.notfound {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+
+  .error {
+    font-size: 260px;
+    text-align: center;
+    color: $gray;
+    font-weight: bold;
+    font-family: $mont;
+  }
+  span {
+    font-size: 17px;
+    position: absolute;
+    top: 196px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #f9f9fb;
+    z-index: 999;
+    width: 550px;
+    font-weight: $hind-regular;
+    letter-spacing: 13px;
+  }
+
+  h2 {
+    font-family: $mont;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 10px;
+  }
+
+  p {
+    color: #999;
+    font-family: $mont;
+    font-weight: bold;
+  }
+
+  h3 {
+    padding: 20px;
+    font-family: $mont;
+    font-weight: 500;
+
+    a {
+      color: $gray;
+      i {
+        color: #999;
+      }
+    }
+  }
+}

@@ -1,0 +1,139 @@
+#comments-section {
+  h3 {
+    text-transform: uppercase;
+    font-size: 22px;
+    border-top: 2px solid $gray;
+    padding: 10px 0;
+  }
+}
+
+#respond {
+  margin: 50px 0;
+  padding: 0 10px 0 10px;
+  #comment,
+  #author,
+  #email {
+    width: 60%;
+    border: 2px solid $gray;
+    transition: 0.3s;
+    @include responsive(md) {
+      width: 100%;
+    }
+    &:focus {
+      border: 2px solid rgba(81, 203, 238, 1);
+      box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    }
+  }
+}
+
+#commentform {
+  display: flex;
+  flex-direction: column;
+  .comment-form-cookies-consent {
+    padding: 25px 0;
+
+    input {
+      cursor: pointer;
+    }
+  }
+
+  #author,
+  #email {
+    padding: 10px;
+  }
+
+  p {
+    text-align: left;
+  }
+}
+/* Highlight active form field */
+
+#respond input[type="text"],
+textarea {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+}
+
+#submit {
+  padding: 8px 18px;
+  font-size: 14px;
+  transition: 0.3s;
+
+  box-shadow: none;
+  font-weight: $hind-medium;
+  background: transparent;
+  border: 2px solid $gray;
+  color: $gray;
+
+  cursor: pointer;
+  &:hover {
+    background: $gray;
+    border: 2px solid transparent;
+    color: white;
+  }
+}
+
+.comments {
+  background: transparent;
+  margin: 20px;
+  article {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: transparent;
+    .comment-content p {
+      padding: 15px;
+      text-align: left;
+    }
+  }
+  .comment-meta {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-start;
+    a {
+      color: #999;
+    }
+  }
+
+  .all-comments .vcard {
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+  }
+
+  .all-comments .photo {
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    height: 50px;
+    width: 50px;
+  }
+
+  .all-comments .says {
+    display: none;
+  }
+
+  .all-comments .reply a {
+    padding: 10px;
+    font-weight: $hind-semibold;
+    float: left;
+    color: $gray;
+    transition: 0.3s;
+    &:hover {
+      color: #999;
+    }
+  }
+
+  .children {
+    margin-left: 40px;
+    margin-top: -30px;
+  }
+}

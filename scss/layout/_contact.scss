@@ -1,0 +1,96 @@
+#contact-article {
+  background: none;
+  @include responsive(md) {
+    margin: 10px;
+  }
+}
+
+.contact-information {
+  background: white;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  @include responsive(md) {
+    flex-direction: column;
+  }
+}
+
+iframe {
+  flex: 2;
+  @include responsive(md) {
+    height: 300px;
+  }
+}
+.contact-text {
+  box-shadow: 1px 3px 1px -1px rgba(232, 232, 232, 0.6);
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 25px;
+  p {
+    text-align: left;
+    padding: 0;
+  }
+
+  h3 {
+    padding-right: 40px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(195, 195, 195);
+    margin-bottom: 10px;
+  }
+}
+
+.contact-form {
+  form p:nth-child(2) {
+    width: 49%;
+
+    float: left;
+    @include responsive(md) {
+      width: 100%;
+    }
+  }
+  form p:nth-child(3) {
+    width: 49%;
+    float: right;
+    @include responsive(md) {
+      width: 100%;
+    }
+  }
+  .your-website,
+  .your-message,
+  .your-name,
+  .your-email {
+    width: 100%;
+    border: none;
+
+    &::placeholder {
+      font-weight: $hind-medium;
+    }
+  }
+
+  input,
+  textarea,
+  .contact-information {
+    box-shadow: 1px 3px 1px -1px rgba(232, 232, 232, 0.6);
+    padding: 10px;
+  }
+
+  .wp-block-columns {
+    margin: 0;
+  }
+
+  .wpcf7-submit {
+    float: left;
+    background: $gray;
+    color: white;
+    padding: 10px 20px;
+    border: 0;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: $hind-medium;
+    &:hover {
+      background: #999;
+    }
+  }
+}

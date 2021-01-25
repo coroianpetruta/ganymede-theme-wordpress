@@ -1,0 +1,89 @@
+#mainContent {
+  padding: 80px 0;
+  display: flex;
+  max-width: 90%;
+  margin: auto;
+  align-items: flex-start;
+  @include responsive(lg) {
+    flex-direction: column;
+    max-width: 95%;
+  }
+  @include responsive(md) {
+    max-width: 100%;
+    display: block;
+  }
+}
+/* modify margin top to only appear when btn clicked */
+
+main {
+  flex: 3;
+  article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+    background: white;
+  }
+
+  h2 {
+    text-transform: uppercase;
+    margin: 20px 0;
+  }
+}
+
+.pagination {
+  text-align: center;
+  @include responsive(lg) {
+    margin-bottom: 50px;
+  }
+  a {
+    color: $gray;
+    padding: 5px 15px;
+    border: 1px solid transparent;
+    transition-duration: 0.3s;
+  }
+
+  span {
+    background-color: #999;
+    color: white;
+    padding: 5px 15px;
+    border: 1px solid transparent;
+  }
+
+  a:hover {
+    border: 1px solid $gray;
+  }
+}
+
+#single-pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @include responsive(lg) {
+    margin-bottom: 50px;
+  }
+  a {
+    width: 49%;
+    margin-top: -30px;
+    padding: 40px;
+    background: #999;
+    color: white;
+    text-align: center;
+    transition: 0.3s;
+    &:hover {
+      background: $gray;
+    }
+  }
+}
+
+main p {
+  padding: 12px 0;
+  text-align: center;
+}
+
+main blockquote {
+  margin: 10px;
+  padding: 15px;
+  font-size: 17px;
+  max-width: 70%;
+}

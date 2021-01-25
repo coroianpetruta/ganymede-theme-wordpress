@@ -1,0 +1,145 @@
+.article-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 60px;
+  @include responsive(md) {
+    padding: 40px 15px;
+  }
+  p {
+    @include responsive(md) {
+      align-items: flex-start;
+      padding: 10px 0;
+      text-align: justify;
+    }
+  }
+  .category a {
+    font-weight: $hind-regular;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #999;
+    transition-duration: 0.3s;
+    &:hover {
+      color: #464646;
+    }
+  }
+  a h3 {
+    text-align: center;
+    font-family: $mont;
+    font-weight: bold;
+    font-size: 28px;
+    margin: 20px 0;
+    text-transform: uppercase;
+    color: #212121;
+    transition-duration: 0.3s;
+    &:hover {
+      color: #999;
+    }
+  }
+
+  .post-info {
+    display: flex;
+    div {
+      font-weight: $hind-regular;
+      text-transform: uppercase;
+      font-size: 16px;
+      color: #999;
+      margin: 0 10px;
+      i {
+        color: #464646;
+      }
+    }
+  }
+
+  .excerpt {
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: $hind-light;
+    font-size: 16px;
+    color: #464646;
+  }
+
+  a button {
+    font-size: 14px;
+    font-weight: $hind-medium;
+    color: #212121;
+    background: transparent;
+    border: 1px solid #d7d7d7;
+    border-top: none;
+    border-bottom: none;
+    height: 35px;
+    &:hover {
+      color: white;
+      background: #212121;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.bottom-bar {
+  border-top: 1px solid #f2f2f4;
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: flex-end;
+  a {
+    color: #464646;
+    padding: 0 15px;
+  }
+
+  a:first-child {
+    margin-right: auto;
+    color: #999;
+    i {
+      margin-right: 10px;
+      color: #464646;
+    }
+  }
+}
+
+.article-image {
+  width: 100%;
+  padding-top: 50%;
+  position: relative;
+  background-image: url("mars.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.facebook:hover {
+  color: #3b5998;
+}
+
+.pinterest:hover {
+  color: #c8232c;
+}
+
+.twitter:hover {
+  color: #00acee;
+}
+
+.instagram:hover {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tags {
+  margin-top: 20px;
+}
+
+.post-info {
+  margin-bottom: 35px;
+}
